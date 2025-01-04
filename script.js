@@ -29,7 +29,7 @@ async function getSongs() {
 
 const playMusic = (track, pause = false)=> {
     const trackFile = track.endsWith('.mp3') ? track : track.replaceAll(' ', '-') + '.mp3'
-    currentSong.src = "/songs/" + trackFile
+    currentSong.src = "./songs/" + trackFile
     if(!pause) {
         currentSong.play()
         play.src = "svg/pause.svg"
